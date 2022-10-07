@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group 'com.bymatej.minecraft.test.subproject.two'
+version '0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':common-library')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
